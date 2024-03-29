@@ -27,9 +27,7 @@ export const GetRandomRecipe = () => {
             <p>
               {recipe.title} {recipe.dishTypes[0]}
             </p>
-            <p>
-              <a>{recipe.sourceUrl}</a>
-            </p>
+            <p>{recipe.sourceUrl}</p>
             <img src={recipe.image} alt="image of the recipe" />
           </div>
         );

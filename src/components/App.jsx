@@ -9,7 +9,7 @@ function App() {
 
   const [welcome, setWelcome] = useState(true)
     useEffect(() => {
-        setTimeout(() => setWelcome(false), 3300)
+        setTimeout(() => setWelcome(false), 2500)
     }, [])
     if (welcome) {
         return <Welcome />

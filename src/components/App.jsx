@@ -1,5 +1,5 @@
 import "../styles/App.css";
-import { Header } from "./Header";
+import { Header } from "./header/Header";
 import { GetRandomRecipe } from "./GetRandomRecipe";
 import { Welcome } from "./welcome/Welcome";
 import { useEffect, useState } from "react";
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <GetRandomRecipe />
+      
 
     </div>
   );

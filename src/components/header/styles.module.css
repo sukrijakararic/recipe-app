@@ -1,0 +1,16 @@
+.header {
+   
+    padding: .5rem;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.good {
+    color: green;
+    font-family: "PAcifico",sans-serif;
+}
+
+.eats {
+    color: brown;
+    font-family: "Modak",sans-serif;
+}

@@ -1,5 +1,5 @@
 .header {
-   
+   border-bottom: 1px solid black;
     padding: .5rem;
     text-align: left;
     font-size: 3rem;
@@ -13,4 +13,9 @@
 .eats {
     color: brown;
     font-family: "Modak",sans-serif;
+}
+
+.chicken {
+    width: 3rem;
+    height: 3rem;
 }

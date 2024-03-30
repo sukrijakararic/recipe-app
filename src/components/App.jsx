@@ -3,6 +3,7 @@ import { Header } from "./header/Header";
 import { GetRandomRecipe } from "./GetRandomRecipe";
 import { Welcome } from "./welcome/Welcome";
 import { useEffect, useState } from "react";
+import { Ingredients } from "./ingredients/Ingredients";
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Ingredients />
+      <GetRandomRecipe />
       
 
     </div>

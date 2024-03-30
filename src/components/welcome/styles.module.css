@@ -1,10 +1,20 @@
-/*.welcomeScreen {
-  max-width: 220px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}*/
+.welcomeScreen {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  border: 1px solid black;
+  margin: auto;
+
+}
+
+.welcome {
+
+  border: 1px solid black;
+
+}
 
 .welcome path:nth-child(2) {
   stroke-dasharray: 200%;
@@ -49,20 +59,134 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  #loader-container {
-    max-width: 150px;
+@media screen and (max-width: 1279px) {
+
+  .welcomeScreen {
+    max-width: 1279px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
   }
-  #loader {
-    width: 150px;
+  .welcome {
+    max-width:  1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
   }
 }
 
-@media screen and (max-width: 650px) {
-  #loader-container {
-    max-width: 100px;
+@media screen and (max-width: 1100px) {
+
+  .welcomeScreen {
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
   }
-  #loader {
-    width: 100px;
+  .welcome {
+    max-width:  900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .welcomeScreen {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+  }
+  .welcome {
+    max-width:  700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .welcomeScreen {
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 350px;
+    
+    
+  }
+  .welcome {
+    max-width:  500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 350px;
+    
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .welcomeScreen {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 350px;
+    
+    
+  }
+  .welcome {
+    max-width:  400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 350px;
+    
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .welcomeScreen {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 350px;
+    
+    
+  }
+  .welcome {
+    max-width:  350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 350px;
+    
   }
 }

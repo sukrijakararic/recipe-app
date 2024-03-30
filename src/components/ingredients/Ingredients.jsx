@@ -11,7 +11,7 @@ export const Ingredients = () => {
 
   return (
     <>
-    <h2>Whatg do you feel like eating today?</h2>
+    <h2>What do you feel like eating today?</h2>
     <form className={styles.ingredientList}>
         <h3>Pick a protein</h3>
 

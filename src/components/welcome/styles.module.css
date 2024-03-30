@@ -5,16 +5,10 @@
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  border: 1px solid black;
   margin: auto;
 
 }
 
-.welcome {
-
-  border: 1px solid black;
-
-}
 
 .welcome path:nth-child(2) {
   stroke-dasharray: 200%;

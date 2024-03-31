@@ -5,7 +5,7 @@ const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 export const GetRandomRecipe = ({protein, cuisine}) => {
   const [popular, setPopular] = useState([]);
 
-  console.log(protein)
+  console.log(protein) // dont forget to delete these before production 
   console.log(cuisine)
 
 

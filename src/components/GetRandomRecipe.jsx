@@ -2,12 +2,17 @@ import React, { useState } from "react";
 
 const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 
-export const GetRandomRecipe = () => {
+export const GetRandomRecipe = ({protein, cuisine}) => {
   const [popular, setPopular] = useState([]);
 
+  console.log(protein)
+  console.log(cuisine)
+
+
+  
   const getPopular = async () => {
     const response = await fetch(
-      `https://api.spoonacular.com/recipes/random?${apiKey}&number=3&exclude-tags=pork,bacon`
+      `https://api.spoonacular.com/recipes/random?${apiKey}&number=3&include-tags=${cuisine}${protein}`
     );
     const jsonResponse = await response.json();
     console.log(jsonResponse);

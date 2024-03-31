@@ -3,26 +3,27 @@ import { Header } from "./header/Header";
 import { GetRandomRecipe } from "./GetRandomRecipe";
 import { Welcome } from "./welcome/Welcome";
 import { useEffect, useState } from "react";
-import { Ingredients } from "./ingredients/Ingredients";
-
+import { Meats } from "./ingredients/Meats";
+import { Cuisine } from "./ingredients/Cuisine";
 
 function App() {
+  const [protein, setProtein] = useState("");
+  const [cuisine, setCuisine] = useState("");
 
-  const [welcome, setWelcome] = useState(true)
-    useEffect(() => {
-        setTimeout(() => setWelcome(false), 2500)
-    }, [])
-    if (welcome) {
-        return <Welcome />
-    }
+  const [welcome, setWelcome] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setWelcome(false), 2500);
+  }, []);
+  if (welcome) {
+    return <Welcome />;
+  }
 
   return (
     <div className="App">
       <Header />
-      <Ingredients />
-      <GetRandomRecipe />
-      
-
+      <Cuisine setCuisine={setCuisine}/>
+      <Meats setProtein={setProtein} />
+      <GetRandomRecipe protein={protein} cuisine={cuisine} />
     </div>
   );
 }

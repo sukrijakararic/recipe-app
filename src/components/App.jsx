@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Meats } from "./ingredients/Meats";
 import { Cuisine } from "./ingredients/Cuisine";
 
+
 function App() {
   const [protein, setProtein] = useState("");
   const [cuisine, setCuisine] = useState("");
@@ -21,7 +22,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+     
       <Cuisine setCuisine={setCuisine}/>
+
       <Meats setProtein={setProtein} />
       <GetRandomRecipe protein={protein} cuisine={cuisine} />
     </div>

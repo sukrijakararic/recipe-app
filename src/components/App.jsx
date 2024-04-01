@@ -24,13 +24,16 @@ function App() {
   return (
     <div className="App">
       <Header />
-     
-      <Cuisine setCuisine={setCuisine}/>
+
+      <Cuisine setCuisine={setCuisine} />
 
       <Meats setProtein={setProtein} />
-      <GetRandomRecipe protein={protein} cuisine={cuisine} setPopular={setPopular} popular={popular} />
-      <Pagination defaultCurrent={1} total={500} />
-
+      <GetRandomRecipe
+        protein={protein}
+        cuisine={cuisine}
+        setPopular={setPopular}
+        popular={popular}
+      />
     </div>
   );
 }

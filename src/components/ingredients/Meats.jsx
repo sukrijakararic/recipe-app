@@ -29,8 +29,8 @@ export const Meats = ( {setProtein}) => {
         </div>
         
         <div className={styles.protein}>
-        <input onClick={handleClick} type="radio" name="protein" id="vegetarian," />
-        <label htmlFor="vegetarian,">vegetarian</label>
+        <input onClick={handleClick} type="radio" name="protein" id='&diet=vegetarian,' />
+        <label htmlFor="&diet=vegetarian,">Vegetarian</label>
         </div>
 
     </form>

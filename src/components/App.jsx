@@ -5,11 +5,13 @@ import { Welcome } from "./welcome/Welcome";
 import { useEffect, useState } from "react";
 import { Meats } from "./ingredients/Meats";
 import { Cuisine } from "./ingredients/Cuisine";
+import { Pagination } from "antd";
 
 
 function App() {
   const [protein, setProtein] = useState("");
   const [cuisine, setCuisine] = useState("");
+  const [popular, setPopular] = useState([]);
 
   const [welcome, setWelcome] = useState(true);
   useEffect(() => {
@@ -26,7 +28,9 @@ function App() {
       <Cuisine setCuisine={setCuisine}/>
 
       <Meats setProtein={setProtein} />
-      <GetRandomRecipe protein={protein} cuisine={cuisine} />
+      <GetRandomRecipe protein={protein} cuisine={cuisine} setPopular={setPopular} popular={popular} />
+      <Pagination defaultCurrent={1} total={500} />
+
     </div>
   );
 }

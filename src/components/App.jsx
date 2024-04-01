@@ -5,7 +5,6 @@ import { Welcome } from "./welcome/Welcome";
 import { useEffect, useState } from "react";
 import { Meats } from "./ingredients/Meats";
 import { Cuisine } from "./ingredients/Cuisine";
-import { Pagination } from "antd";
 
 
 function App() {

@@ -12,7 +12,7 @@ export const Meats = ({ setProtein }) => {
 
   return (
     <div data-aos="fade-up">
-      <h3>Pick a protein</h3>
+      <h3>Then, a protein</h3>
       <form>
         <div>
           <input

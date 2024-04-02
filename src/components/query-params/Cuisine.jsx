@@ -13,7 +13,7 @@ export const Cuisine = ({ setCuisine }) => {
 
   return (
     <div data-aos="fade-up">
-      <h3>First, lets pick a cuisine</h3>
+      <h3>Now, lets pick a cuisine</h3>
       <form className={choices.cuisine}>
         <div>
           <input

@@ -1,16 +1,21 @@
 import { useEffect } from "react";
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 
-export const GetRandomRecipe = ({ protein, cuisine, setPopular, popular, type }) => {
-
+export const GetRandomRecipe = ({
+  protein,
+  cuisine,
+  setPopular,
+  popular,
+  type,
+}) => {
   useEffect(() => {
     Aos.init();
-  }, [])
+  }, []);
 
-  const offset = Math.floor(Math.random()*9)
+  const offset = Math.floor(Math.random() * 9);
 
   const getPopular = async () => {
     try {
@@ -31,10 +36,18 @@ export const GetRandomRecipe = ({ protein, cuisine, setPopular, popular, type })
     getPopular();
   };
 
-
   return (
     <div>
-      {type && cuisine && protein ? <button data-aos="flip-left" onClick={handleClick}><span className="lets">Lets</span>{" "}<span className="eat">Eat!</span></button> : <></>}
+      {type && cuisine && protein ? (
+        <div data-aos="flip-left">
+          <h3>And finally,</h3>{" "}
+          <button onClick={handleClick}>
+            <span className="lets">Lets</span> <span className="eat">Eat!</span>
+          </button>{" "}
+        </div>
+      ) : (
+        <></>
+      )}
       {popular.map((recipe) => {
         return (
           <div key={recipe.id} data-aos="fade-right">

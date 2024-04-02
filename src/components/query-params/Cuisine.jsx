@@ -51,6 +51,7 @@ export const Cuisine = ({ setCuisine }) => {
             type="radio"
             id="middleeastern,"
             name="cuisine"
+            className="middle"
           />
           <label htmlFor="middleeastern,">Middle Eastern</label>
         </div>

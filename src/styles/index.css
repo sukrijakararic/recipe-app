@@ -43,3 +43,11 @@ padding: .4rem;
   font-family: "modak",sans-serif;
   color: brown;
 }
+
+.choice {
+  background-color: blue;
+}
+
+.choice:hover {
+  background-color: red;
+}

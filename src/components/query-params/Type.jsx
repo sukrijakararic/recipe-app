@@ -2,23 +2,30 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-
 export const Type = ({ setType }) => {
   useEffect(() => {
     Aos.init();
   }, []);
 
-  const handleClick = (e) => {
-    setType(e.target.id);
+  let activeElement;
+
+  const handleClick = (target) => {
+    setType(target.id);
+
+    if (activeElement) {
+    activeElement.classList.remove("choice");
+    } 
+    activeElement = target;
   };
 
   const handleColor = () => {
-    element.classList.add("choice");
+    activeElement.classList.add("choice");
   };
 
-  const executeBoth = () => {
-    handleClick();
-    handleColor();
+  const executeBoth = (event) => {
+    const eventTarget = event.target
+    handleClick(eventTarget);
+    handleColor(eventTarget);
   };
 
   return (
@@ -34,7 +41,7 @@ export const Type = ({ setType }) => {
 
         <div>
           <span
-            onClick={handleClick}
+            onClick={executeBoth}
             id="lunch,"
             name="type"
           >
@@ -44,7 +51,7 @@ export const Type = ({ setType }) => {
 
         <div>
           <span
-            onClick={handleClick}
+            onClick={executeBoth}
             id="dinner,"
             name="type"
           >

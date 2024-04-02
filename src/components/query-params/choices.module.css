@@ -10,6 +10,10 @@ form {
     background-color: beige;
 }
 
+
+span {
+    cursor: pointer;
+}
 .cuisine {
     flex-wrap: wrap;
 }

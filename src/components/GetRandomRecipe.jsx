@@ -4,11 +4,12 @@ const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 
 export const GetRandomRecipe = ({ protein, cuisine, setPopular, popular }) => {
 
+  const offset = Math.floor(Math.random()*9)
 
   const getPopular = async () => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=10&query=${cuisine}${protein}&maxAlcohol=0&`
+        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=3&query=${cuisine}${protein}&maxAlcohol=0&offset=${offset}&instructionsRequired=true&addRecipeInstructions=true&`
       );
       const jsonResponse = await response.json();
       console.log(jsonResponse);

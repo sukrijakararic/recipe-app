@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
-import styles from "./styles.module.css";
+import choices from "./choices.module.css";
 
 export const Cuisine = ({ setCuisine }) => {
   useEffect(() => {
@@ -15,7 +14,7 @@ export const Cuisine = ({ setCuisine }) => {
   return (
     <div data-aos="fade-up">
       <h3>First, lets pick a cuisine</h3>
-      <form className={styles.cuisine}>
+      <form className={choices.cuisine}>
         <div>
           <input
             onClick={handleClick}

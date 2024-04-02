@@ -3,9 +3,43 @@ body{
   padding: 0;
   box-sizing: border-box;
   text-align: center;
+  background-color: wheat;
 }
 
 img {
   width: 23rem;
   height: 15rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 3px black;
+}
+
+button {
+  background-color: burlywood;
+  text-decoration: none;
+  font-family: "modak", sans-serif;
+  font-size: 1.3rem;
+  border-radius: .5rem;
+  padding: .3rem;
+  box-shadow: 3px 3px 2px black;
+  
+
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+box-shadow: none;
+padding: .4rem;
+}
+
+.lets {
+  font-family: "Pacifico",sans-serif;
+  color: green;
+}
+
+.eat {
+  font-family: "modak",sans-serif;
+  color: brown;
 }

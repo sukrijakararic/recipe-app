@@ -1,21 +1,24 @@
 .header {
-   border-bottom: 1px solid black;
-    padding: .5rem;
-    text-align: left;
-    font-size: 3rem;
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 3rem;
 }
 
 .good {
-    color: green;
-    font-family: "PAcifico",sans-serif;
+  color: green;
+  font-family: "PAcifico", sans-serif;
 }
 
 .eats {
-    color: brown;
-    font-family: "Modak",sans-serif;
+  color: brown;
+  font-family: "Modak", sans-serif;
 }
 
 .chicken {
-    width: 3rem;
-    height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: none;
 }

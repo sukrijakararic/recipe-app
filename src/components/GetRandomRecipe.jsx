@@ -31,9 +31,10 @@ export const GetRandomRecipe = ({ protein, cuisine, setPopular, popular, type })
     getPopular();
   };
 
+
   return (
     <div>
-      <button onClick={handleClick}>Generate</button>
+      {type && cuisine && protein ? <button data-aos="flip-left" onClick={handleClick}><span className="lets">Lets</span>{" "}<span className="eat">Eat!</span></button> : <></>}
       {popular.map((recipe) => {
         return (
           <div key={recipe.id} data-aos="fade-right">

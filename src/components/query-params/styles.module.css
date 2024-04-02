@@ -17,3 +17,7 @@ form {
 .cuisine div {
     margin: 5px;
 }
+
+form div:has(input:checked) {
+    background-color: green;
+  }

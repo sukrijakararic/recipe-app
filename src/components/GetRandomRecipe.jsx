@@ -1,15 +1,21 @@
-import React from "react";
+import { useEffect } from "react";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 
-export const GetRandomRecipe = ({ protein, cuisine, setPopular, popular }) => {
+export const GetRandomRecipe = ({ protein, cuisine, setPopular, popular, type }) => {
+
+  useEffect(() => {
+    Aos.init();
+  }, [])
 
   const offset = Math.floor(Math.random()*9)
 
   const getPopular = async () => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=3&query=${cuisine}${protein}&maxAlcohol=0&offset=${offset}&instructionsRequired=true&addRecipeInstructions=true&`
+        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=3&query=${cuisine}${protein}${type}&maxAlcohol=0&offset=${offset}&instructionsRequired=true&addRecipeInstructions=true&`
       );
       const jsonResponse = await response.json();
       console.log(jsonResponse);
@@ -30,7 +36,7 @@ export const GetRandomRecipe = ({ protein, cuisine, setPopular, popular }) => {
       <button onClick={handleClick}>Generate</button>
       {popular.map((recipe) => {
         return (
-          <div key={recipe.id}>
+          <div key={recipe.id} data-aos="fade-right">
             <p>{recipe.title}</p>
             <img src={recipe.image} alt="a picture of the food" />
           </div>

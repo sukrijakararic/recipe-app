@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 import styles from "./styles.module.css";
 
 export const Cuisine = ({ setCuisine }) => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const handleClick = (e) => {
     setCuisine(e.target.id);
   };
 
   return (
-    <div>
-
-<h3>First, lets pick a cuisine</h3>
+    <div data-aos="fade-up">
+      <h3>First, lets pick a cuisine</h3>
       <form className={styles.cuisine}>
-
         <div>
           <input
             onClick={handleClick}

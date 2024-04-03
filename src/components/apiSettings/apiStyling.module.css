@@ -22,14 +22,44 @@ li {
   text-align: left;
 }
 
+button {
+  background-color: bisque;
+  text-decoration: none;
+  font-family: "modak", sans-serif;
+  border: 1px solid bisque;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  box-shadow: 3px 3px 2px burlywood;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: none;
+  padding: 0.4rem;
+}
+
+.lets {
+  font-family: "Pacifico", sans-serif;
+  color: green;
+}
+
+.eat {
+  font-family: "modak", sans-serif;
+  color: brown;
+}
+
 .recipeTitle {
   margin-left: 2rem;
   font-family: "pacifico";
 }
 
 .instructions {
-    text-align: left;
-    margin: 0 2rem 0 2rem;
+  text-align: left;
+  margin: 0 2rem 0 2rem;
 }
 
 .imageContainer {
@@ -37,7 +67,8 @@ li {
 }
 
 @media screen and (max-width: 619px) {
-    .results {
-        flex-wrap: wrap;
-    }
+  .results {
+    flex-wrap: wrap;
+    justify-content: left;
   }
+}

@@ -43,11 +43,12 @@ export const GetRandomRecipe = ({
         <div data-aos="flip-left">
           <h3>And finally,</h3>{" "}
           <button onClick={handleClick}>
-            <span className="lets">Lets</span> <span className="eat">Eat!</span>
+            <span className={apiStyling.lets}>Lets</span>
+            <span className={apiStyling.eat}> Eat!</span>
           </button>{" "}
         </div>
       ) : (
-        <></>
+        null
       )}
       {popular.map((recipe) => {
         return (
@@ -57,24 +58,29 @@ export const GetRandomRecipe = ({
               <div className={apiStyling.imageContainer}>
                 <img src={recipe.image} alt="a picture of the food" />
                 <p>Ready in {recipe.readyInMinutes} minutes</p>
+              </div>
+              <div className={apiStyling.instructions}>
                 <h4>Here's what you'll need</h4>
                 <ul>
                   {recipe.extendedIngredients.map((ingredient) => {
-                    return <li key={ingredient.key}>{ingredient.original}</li>;
+                    return (
+                      <li key={self.crypto.randomUUID()}>
+                        {ingredient.original}
+                      </li>
+                    );
                   })}
                 </ul>
-              </div>
-              <div className={apiStyling.instructions}>
                 <h3>Instructions</h3>
-                <p>
+
+                <div>
                   {recipe.analyzedInstructions[0].steps.map((steps) => {
                     return (
-                      <p>
+                      <p key={self.crypto.randomUUID()}>
                         {steps.number}. {steps.step}
                       </p>
                     );
                   })}
-                </p>
+                </div>
               </div>
             </div>
           </div>

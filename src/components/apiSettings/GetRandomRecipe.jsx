@@ -58,8 +58,19 @@ export const GetRandomRecipe = ({
               <div className={apiStyling.imageContainer}>
                 <img src={recipe.image} alt="a picture of the food" />
                 <p>Ready in {recipe.readyInMinutes} minutes</p>
+                                <h3>Instructions</h3>
+
+                <div >
+                  {recipe.analyzedInstructions[0].steps.map((steps) => {
+                    return (
+                      <p key={self.crypto.randomUUID()}>
+                        {steps.number}. {steps.step}
+                      </p>
+                    );
+                  })}
+                </div>
               </div>
-              <div className={apiStyling.instructions}>
+              <div className={apiStyling.ingredientList}>
                 <h4>Here's what you'll need</h4>
                 <ul>
                   {recipe.extendedIngredients.map((ingredient) => {
@@ -70,17 +81,7 @@ export const GetRandomRecipe = ({
                     );
                   })}
                 </ul>
-                <h3>Instructions</h3>
 
-                <div>
-                  {recipe.analyzedInstructions[0].steps.map((steps) => {
-                    return (
-                      <p key={self.crypto.randomUUID()}>
-                        {steps.number}. {steps.step}
-                      </p>
-                    );
-                  })}
-                </div>
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ export const GetRandomRecipe = ({
   const getPopular = async () => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=3&query=${cuisine}${protein}${type}&maxAlcohol=0&offset=${offset}&`
+        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=3&query=${cuisine}${protein}${type}&maxAlcohol=0&offset=${offset}&addRecipeInformation=true&instructionsRequired=true&addRecipeInstructions=true&fillIngredients=true`
       );
       const jsonResponse = await response.json();
       console.log(jsonResponse);
@@ -51,14 +51,32 @@ export const GetRandomRecipe = ({
       )}
       {popular.map((recipe) => {
         return (
-          <div
-            key={recipe.id}
-            data-aos="fade-right"
-            className={apiStyling.results}
-          >
-            <p>{recipe.title}</p>
-
-            <img src={recipe.image} alt="a picture of the food" />
+          <div key={recipe.id} data-aos="fade-right">
+            <p className={apiStyling.recipeTitle}>{recipe.title}</p>
+            <div className={apiStyling.results}>
+              <div className={apiStyling.imageContainer}>
+                <img src={recipe.image} alt="a picture of the food" />
+                <p>Ready in {recipe.readyInMinutes} minutes</p>
+                <h4>Here's what you'll need</h4>
+                <ul>
+                  {recipe.extendedIngredients.map((ingredient) => {
+                    return <li key={ingredient.key}>{ingredient.original}</li>;
+                  })}
+                </ul>
+              </div>
+              <div className={apiStyling.instructions}>
+                <h3>Instructions</h3>
+                <p>
+                  {recipe.analyzedInstructions[0].steps.map((steps) => {
+                    return (
+                      <p>
+                        {steps.number}. {steps.step}
+                      </p>
+                    );
+                  })}
+                </p>
+              </div>
+            </div>
           </div>
         );
       })}

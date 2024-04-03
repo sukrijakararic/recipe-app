@@ -6,13 +6,6 @@ body{
   background-color: wheat;
 }
 
-img {
-  width: 23rem;
-  height: 15rem;
-  border-radius: 1rem;
-  box-shadow: 5px 5px 3px black;
-}
-
 button {
   background-color: bisque;
   text-decoration: none;
@@ -42,4 +35,19 @@ padding: .4rem;
 .eat {
   font-family: "modak",sans-serif;
   color: brown;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: wheat;
+  border: none;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: burlywood;
 }

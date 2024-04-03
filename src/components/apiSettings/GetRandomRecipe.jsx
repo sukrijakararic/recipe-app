@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import apiStyling from "./apiStyling.module.css";
 
 const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 
@@ -20,7 +21,7 @@ export const GetRandomRecipe = ({
   const getPopular = async () => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=3&query=${cuisine}${protein}${type}&maxAlcohol=0&offset=${offset}&instructionsRequired=true&addRecipeInstructions=true&`
+        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=3&query=${cuisine}${protein}${type}&maxAlcohol=0&offset=${offset}&`
       );
       const jsonResponse = await response.json();
       console.log(jsonResponse);
@@ -50,8 +51,13 @@ export const GetRandomRecipe = ({
       )}
       {popular.map((recipe) => {
         return (
-          <div key={recipe.id} data-aos="fade-right">
+          <div
+            key={recipe.id}
+            data-aos="fade-right"
+            className={apiStyling.results}
+          >
             <p>{recipe.title}</p>
+
             <img src={recipe.image} alt="a picture of the food" />
           </div>
         );

@@ -60,16 +60,16 @@ export const GetRandomRecipe = ({
                 <h4>Here's what you'll need</h4>
                 <ul>
                   {recipe.extendedIngredients.map((ingredient) => {
-                    return <li key={ingredient.key}>{ingredient.original}</li>;
+                    return <li key={self.crypto.randomUUID()}>{ingredient.original}</li>;
                   })}
                 </ul>
               </div>
-              <div className={apiStyling.instructions}>
+              <div className={apiStyling.ingredientList}>
                 <h3>Instructions</h3>
                 <p>
                   {recipe.analyzedInstructions[0].steps.map((steps) => {
                     return (
-                      <p>
+                      <p key={self.crypto.randomUUID()}>
                         {steps.number}. {steps.step}
                       </p>
                     );

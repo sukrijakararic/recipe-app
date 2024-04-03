@@ -66,7 +66,7 @@ export const GetRandomRecipe = ({
               </div>
               <div className={apiStyling.ingredientList}>
                 <h3>Instructions</h3>
-                <p>
+                <div>
                   {recipe.analyzedInstructions[0].steps.map((steps) => {
                     return (
                       <p key={self.crypto.randomUUID()}>
@@ -74,7 +74,7 @@ export const GetRandomRecipe = ({
                       </p>
                     );
                   })}
-                </p>
+                </div>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import apiStyling from "./apiStyling.module.css";
+import 'animate.css';
 
 const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 
@@ -40,11 +41,11 @@ export const GetRandomRecipe = ({
   return (
     <div>
       {type && cuisine && protein ? (
-        <div data-aos="flip-left">
-          <h3>And finally,</h3>{" "}
+        <div className="animate__animated animate__jackInTheBox">
+          <h3>And finally,</h3>
           <button onClick={handleClick}>
             <span className="lets">Lets</span> <span className="eat">Eat!</span>
-          </button>{" "}
+          </button>
         </div>
       ) : (
         <></>

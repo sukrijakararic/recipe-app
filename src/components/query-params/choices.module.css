@@ -12,6 +12,7 @@ form {
 form div {
     padding: .3rem;
     border-radius: .5rem;
+    border: 1px solid bisque;
 }
 
 form div:has(input:checked) {

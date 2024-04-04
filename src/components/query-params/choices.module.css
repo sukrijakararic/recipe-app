@@ -41,7 +41,7 @@ form div:has(input:checked) {
 }
 
 label{
-  margin: 1rem;
+  padding: 1rem;
 }
 
 label:hover {

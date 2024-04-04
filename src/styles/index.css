@@ -19,4 +19,5 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: burlywood;
+  border: 1px solid beige;
 }

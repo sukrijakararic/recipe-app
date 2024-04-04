@@ -30,7 +30,8 @@ button {
   font-size: 1.3rem;
   border-radius: .5rem;
   padding: .3rem;
-  box-shadow: 3px 3px 2px burlywood;
+  box-shadow: 5px 5px 3px burlywood;
+  margin-bottom: 2rem;
 
 }
 

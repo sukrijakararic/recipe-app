@@ -44,7 +44,7 @@ export const GetRandomRecipe = ({
         <div className="animate__animated animate__jackInTheBox">
           <h3>And finally,</h3>
           <button onClick={handleClick}>
-            <span className="lets">Lets</span> <span className="eat">Eat!</span>
+            <span className={apiStyling.lets}>Lets</span> <span className={apiStyling.eat}>Eat!</span>
           </button>
         </div>
       ) : (

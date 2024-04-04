@@ -10,11 +10,11 @@ form {
 }
 
 form div {
-    padding: .3rem;
-    border-radius: .5rem;
-    border: 1px solid bisque;
-    box-shadow: 10px 10px 10px burlywood;
-    background-color: #ffffd7;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid bisque;
+  box-shadow: 10px 10px 10px burlywood;
+  background-color: #ffffd7;
 }
 
 form div:hover {
@@ -22,22 +22,20 @@ form div:hover {
   cursor: pointer;
 }
 
-label:hover {
-  cursor: pointer;
-}
-
 form div:active {
   box-shadow: 4px 4px 4px burlywood;
 }
-
-
 
 form div:has(input:checked) {
   background-color: #f2cc43;
 }
 
+label:hover {
+  cursor: pointer;
+}
+
 input {
-    display: none;
+  display: none;
 }
 
 .cuisine {

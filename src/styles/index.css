@@ -6,37 +6,6 @@ body{
   background: url(/public/pattern-chicken.webp);
 }
 
-button {
-  background-color: bisque;
-  text-decoration: none;
-  font-family: "modak", sans-serif;
-  border: 1px solid bisque;
-  font-size: 1.3rem;
-  border-radius: .5rem;
-  padding: .3rem;
-  box-shadow: 3px 3px 2px burlywood;
-
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-button:active {
-box-shadow: none;
-padding: .4rem;
-}
-
-.lets {
-  font-family: "Pacifico",sans-serif;
-  color: green;
-}
-
-.eat {
-  font-family: "modak",sans-serif;
-  color: brown;
-}
-
 html::-webkit-scrollbar {
   width: 10px;
 }

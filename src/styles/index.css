@@ -3,8 +3,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   text-align: center;
-  background-color: wheat;
-  
+  background: url(/public/pattern-chicken.webp);
 }
 
 button {

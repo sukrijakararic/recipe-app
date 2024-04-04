@@ -13,7 +13,24 @@ form div {
     padding: .3rem;
     border-radius: .5rem;
     border: 1px solid bisque;
+    box-shadow: 10px 10px 10px burlywood;
+    background-color: #ffffd7;
 }
+
+form div:hover {
+  background-color: #fdfd96;
+  cursor: pointer;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+form div:active {
+  box-shadow: 4px 4px 4px burlywood;
+}
+
+
 
 form div:has(input:checked) {
   background-color: #f2cc43;

@@ -3,7 +3,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   text-align: center;
-  background: url(/public/pattern-chicken.webp);
+  background: url(/pattern-chicken.webp);
 }
 
 html::-webkit-scrollbar {

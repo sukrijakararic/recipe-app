@@ -54,7 +54,8 @@ box-shadow: none;
 }
 .recipeTitle {
   margin-left: 2rem;
-  font-family: "pacifico";
+  font-family: "modak", sans-serif;
+  font-size: 1.5rem;
 }
 
 .ingredientList {

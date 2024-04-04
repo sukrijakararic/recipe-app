@@ -41,7 +41,7 @@ export const GetRandomRecipe = ({
   return (
     <div>
       {type && cuisine && protein ? (
-        <div className="animate__animated animate__jackInTheBox">
+        <div className="animate__animated animate__bounceIn">
           <h3>And finally,</h3>
           <button onClick={handleClick}>
             <span className={apiStyling.lets}>Lets</span> <span className={apiStyling.eat}>Eat!</span>

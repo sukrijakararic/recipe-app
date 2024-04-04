@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import choices from "./choices.module.css";
 
 export const Meats = ({ setProtein }) => {
   useEffect(() => {
@@ -13,7 +14,9 @@ export const Meats = ({ setProtein }) => {
   return (
     <div data-aos="fade-up">
       <h3>Then, a protein</h3>
-      <form>
+
+      <div className={choices.formContainer}>
+      <form className={choices.meats}>
         <div>
           <input
             onClick={handleClick}
@@ -44,6 +47,7 @@ export const Meats = ({ setProtein }) => {
           <label htmlFor="&diet=vegetarian,">Vegetarian</label>
         </div>
       </form>
+      </div>
     </div>
   );
 };

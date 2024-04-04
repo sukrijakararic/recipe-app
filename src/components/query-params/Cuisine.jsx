@@ -12,8 +12,10 @@ export const Cuisine = ({ setCuisine }) => {
   };
 
   return (
-    <div data-aos="fade-up">
+    <div data-aos="fade-up" >
       <h3>Now, lets pick a cuisine</h3>
+
+      <div className={choices.formContainer}>
       <form className={choices.cuisine}>
         <div>
           <input
@@ -75,6 +77,7 @@ export const Cuisine = ({ setCuisine }) => {
           <label htmlFor="american,">American</label>
         </div>
       </form>
+      </div>
     </div>
   );
 };

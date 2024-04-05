@@ -8,7 +8,6 @@ export const SearchByIng = ({ setSearch, setExplanation }) => {
     Aos.init();
   }, [])
   const handleClick = (event) => {
-    console.log(event)
     setSearch(event.target.id);
     setExplanation(false)
   };

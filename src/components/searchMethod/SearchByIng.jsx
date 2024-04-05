@@ -26,6 +26,12 @@ export const SearchByIng = ({ setSearch, setExplanation }) => {
           Search by Ingredients
         </p>
       </div>
+
+      <div onClick={handleClick} className={search.optionDiv}>
+        <p id="option3" className={search.option}>
+          I'm Feeling Adventurous
+        </p>
+      </div>
     </div>
   );
 };

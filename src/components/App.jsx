@@ -11,7 +11,7 @@ import { SearchExplanation } from "./searchMethod/SearchExplanation";
 
 function App() {
   const [search, setSearch] = useState("");
-  const [explanation, setExplanation] = useState(true)
+  const [explanation, setExplanation] = useState(true);
   const [type, setType] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
@@ -25,17 +25,14 @@ function App() {
     return <Welcome />;
   }
 
-
   return (
     <div>
       <Header />
-      {explanation === true ? (
-        <SearchExplanation />
-      ): null}
+      {explanation === true ? <SearchExplanation /> : null}
       <SearchByIng setSearch={setSearch} setExplanation={setExplanation} />
 
       <div search={search}>
-        {search === "option1" && explanation === false? (
+        {search === "option1" && explanation === false ? (
           <div className="App">
             <Type setType={setType} />
 
@@ -51,7 +48,7 @@ function App() {
               type={type}
             />
           </div>
-        ) : null}
+        ) : search === "option2" && explanation === false ? null : null}
       </div>
     </div>
   );

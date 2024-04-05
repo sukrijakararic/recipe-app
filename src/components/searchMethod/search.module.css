@@ -1,0 +1,33 @@
+.searchContainer {
+display:flex;
+
+}
+
+.optionDiv {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.optionDiv:hover {
+    background-color: beige;
+    cursor: pointer;
+}
+
+.optionDiv:active {
+    color: white;
+}
+
+.option {
+    margin: 1rem;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 1.5rem;
+    font-family: "Pacifico", sans-serif;
+}
+
+
+@media screen and (max-width: 507px) {
+    #option1 {
+      font-size: 1.6rem;
+    }
+  }

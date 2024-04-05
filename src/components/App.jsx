@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Meats } from "./query-params/Meats";
 import { Cuisine } from "./query-params/Cuisine";
 import { Type } from "./query-params/Type";
+import { SearchByIng } from "./searchMethod/SearchByIng";
 
 function App() {
   const [type, setType] = useState("");
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-
+      <SearchByIng />
       <Type setType={setType} />
 
       <Cuisine setCuisine={setCuisine} />

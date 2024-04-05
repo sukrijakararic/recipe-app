@@ -1,13 +1,18 @@
 .results {
   display: flex;
   justify-content: left;
+  margin: 0 2px;
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: burlywood;
+  padding: 5px;
 }
 
 img {
   width: 23rem;
   height: 15rem;
   border-radius: 1rem;
-  box-shadow: 5px 5px 10px rgb(210, 171, 119);
+  box-shadow: 5px 5px 10px rgb(182, 138, 80);
   text-align: left;
   
 }

@@ -28,7 +28,8 @@ form div {
   border: 1px solid bisque;
   box-shadow: 7px 6px 10px burlywood;
   background-color: #ffffd7;
-  margin: .6rem;
+  padding: .6rem;
+  margin: .4rem;
 }
 
 form div:hover {
@@ -45,7 +46,9 @@ form div:has(input:checked) {
 }
 
 label{
-  padding: 0 1rem;
+  padding: 1rem;
+  
+  
 }
 
 label:hover {

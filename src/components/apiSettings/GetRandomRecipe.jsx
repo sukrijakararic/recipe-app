@@ -9,8 +9,8 @@ const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 export const GetRandomRecipe = ({
   protein,
   cuisine,
-  setPopular,
-  popular,
+  setComplex,
+  complex,
   type,
 }) => {
   useEffect(() => {
@@ -28,7 +28,7 @@ export const GetRandomRecipe = ({
       console.log(jsonResponse);
       const resultsFromArray = jsonResponse.results;
       console.log(resultsFromArray);
-      setPopular(resultsFromArray);
+      setComplex(resultsFromArray);
     } catch (error) {
       console.log(error);
     }
@@ -50,7 +50,7 @@ export const GetRandomRecipe = ({
       ) : (
         <></>
       )}
-      {popular.map((recipe) => {
+      {complex.map((recipe) => {
         return (
           <div key={recipe.id} data-aos="fade-right">
             <p className={apiStyling.recipeTitle}>{recipe.title}</p>

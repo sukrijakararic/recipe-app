@@ -16,7 +16,7 @@ export const Meats = ({ setProtein }) => {
       <h3>Then, a protein</h3>
 
       <div className={choices.formContainer}>
-      <form className={choices.meats}>
+      <form className={choices.meats} id={choices.lastForm}>
         <div>
           <input
             onClick={handleClick}

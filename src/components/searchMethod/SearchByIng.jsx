@@ -1,15 +1,27 @@
 import React from "react";
 import search from "./search.module.css";
-export const SearchByIng = () => {
-  return (
-    <div className={search.searchContainer}>
-      <div className={search.optionDiv} >
-        <p className={search.option}>Search by Ingredients</p>
-      </div>
+export const SearchByIng = ({ setSearch }) => {
+  const handleClick = (event) => {
+    setSearch(event.target.id);
+  };
 
-      <div className={search.optionDiv}>
-        <p id={search.option1} className={search.option}>Search by Query</p>
+  return (
+    <div onClick={handleClick} className={search.searchContainer}>
+      <a href="" target="_blank" className={search.optionAnchor}>
+        <div>
+          <p id={search.option1} className={search.option}>
+            Search by Ingredients
+          </p>
+        </div>
+      </a>
+
+      <a href="" className={search.optionAnchor}>
+      <div onClick={handleClick}>
+        <p id={search.option2} className={search.option}>
+          Search by Query
+        </p>
       </div>
+      </a>
     </div>
   );
 };

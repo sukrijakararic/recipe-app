@@ -10,6 +10,7 @@ import { SearchByIng } from "./searchMethod/SearchByIng";
 
 function App() {
   const [type, setType] = useState("");
+  const [search, setSearch] = useState("")
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
   const [popular, setPopular] = useState([]);
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchByIng />
+      <SearchByIng setSearch={setSearch} />
       <Type setType={setType} />
 
       <Cuisine setCuisine={setCuisine} />

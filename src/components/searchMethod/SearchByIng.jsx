@@ -17,13 +17,13 @@ export const SearchByIng = ({ setSearch, setExplanation }) => {
     <div  className={search.searchContainer} data-aos="fade-right">
       <div className={search.optionDiv} onClick={handleClick}>
         <p id="option1" className={search.option}>
-        Search by Query
+        Search by what I feel like eating
         </p>
       </div>
 
       <div onClick={handleClick} className={search.optionDiv}>
         <p id="option2" className={search.option}>
-          Search by Ingredients
+          Search by whats in your fridge
         </p>
       </div>
 

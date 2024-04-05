@@ -12,6 +12,8 @@ display:flex;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 3px;
+    border-radius: 1rem;
 }
 
 .optionDiv:hover {
@@ -26,10 +28,10 @@ display:flex;
 
 
 .option {
-    margin: 1rem;
+    margin: .2rem;
     text-align: center;
     font-size: 1.5rem;
-    font-family: "Pacifico", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .header {

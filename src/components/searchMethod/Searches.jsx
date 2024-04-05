@@ -3,7 +3,7 @@ import search from "./search.module.css";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
-export const SearchByIng = ({ setSearch, setExplanation }) => {
+export const Searches = ({ setSearch, setExplanation }) => {
   useEffect(() => {
     Aos.init();
   }, [])

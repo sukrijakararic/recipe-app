@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Meats } from "./query-params/Meats";
 import { Cuisine } from "./query-params/Cuisine";
 import { Type } from "./query-params/Type";
-import { SearchByIng } from "./searchMethod/SearchByIng";
+import { Searches } from "./searchMethod/Searches";
 import { SearchExplanation } from "./searchMethod/SearchExplanation";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
     <div>
       <Header />
       {explanation === true ? <SearchExplanation /> : null}
-      <SearchByIng setSearch={setSearch} setExplanation={setExplanation} />
+      <Searches setSearch={setSearch} setExplanation={setExplanation} />
 
       <div search={search}>
         {search === "option1" && explanation === false ? (

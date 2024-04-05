@@ -16,7 +16,7 @@ display:flex;
     cursor: pointer;
 }
 
-.optionAnchor:active {
+.optionDiv:active {
     color: white;
 }
 
@@ -29,3 +29,6 @@ display:flex;
     font-family: "Pacifico", sans-serif;
 }
 
+.header {
+    font-family: "Roboto",sans-serif;
+}

@@ -19,7 +19,7 @@ export const GetRandomRecipe = ({
 
   const offset = Math.floor(Math.random() * 9);
 
-  const getPopular = async () => {
+  const getRandomComplexRecipe = async () => {
     try {
       const response = await fetch(
         `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&number=3&query=${cuisine}${protein}${type}&maxAlcohol=0&offset=${offset}&addRecipeInformation=true&instructionsRequired=true&addRecipeInstructions=true&fillIngredients=true`
@@ -35,7 +35,7 @@ export const GetRandomRecipe = ({
   };
 
   const handleClick = () => {
-    getPopular();
+    getRandomComplexRecipe();
   };
 
   return (

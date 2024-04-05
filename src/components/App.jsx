@@ -7,9 +7,11 @@ import { Meats } from "./query-params/Meats";
 import { Cuisine } from "./query-params/Cuisine";
 import { Type } from "./query-params/Type";
 import { SearchByIng } from "./searchMethod/SearchByIng";
+import { SearchExplanation } from "./searchMethod/SearchExplanation";
 
 function App() {
   const [search, setSearch] = useState("");
+  const [explanation, setExplanation] = useState(false)
   const [type, setType] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
@@ -26,6 +28,7 @@ function App() {
   return (
     <div>
       <Header />
+      <SearchExplanation />
       <SearchByIng setSearch={setSearch} />
 
       <div search={search}>

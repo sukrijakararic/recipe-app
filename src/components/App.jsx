@@ -9,8 +9,8 @@ import { Type } from "./query-params/Type";
 import { SearchByIng } from "./searchMethod/SearchByIng";
 
 function App() {
+  const [search, setSearch] = useState("");
   const [type, setType] = useState("");
-  const [search, setSearch] = useState("")
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
   const [popular, setPopular] = useState([]);
@@ -24,21 +24,29 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <Header />
       <SearchByIng setSearch={setSearch} />
-      <Type setType={setType} />
 
-      <Cuisine setCuisine={setCuisine} />
+      <div search={search}>
+        {search === "option1" ? (
+          <div className="App">
+            <Type setType={setType} />
 
-      <Meats setProtein={setProtein} />
-      <GetRandomRecipe
-        protein={protein}
-        cuisine={cuisine}
-        setPopular={setPopular}
-        popular={popular}
-        type={type}
-      />
+            <Cuisine setCuisine={setCuisine} />
+
+            <Meats setProtein={setProtein} />
+
+            <GetRandomRecipe
+              protein={protein}
+              cuisine={cuisine}
+              setPopular={setPopular}
+              popular={popular}
+              type={type}
+            />
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }

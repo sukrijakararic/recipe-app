@@ -4,14 +4,14 @@ display:flex;
 
 }
 
-.optionAnchor {
+.optionDiv {
     border: 1px solid black;
     width: 100%;
     text-decoration: none;
     color: black;
 }
 
-.optionAnchor:hover {
+.optionDiv:hover {
     background-color: beige;
     cursor: pointer;
 }
@@ -29,9 +29,3 @@ display:flex;
     font-family: "Pacifico", sans-serif;
 }
 
-
-@media screen and (max-width: 507px) {
-    #option2 {
-      font-size: 1.6rem;
-    }
-  }

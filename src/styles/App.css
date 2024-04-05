@@ -2,3 +2,9 @@
     font-family: "Roboto", sans-serif;
     text-align: center;
   }
+
+  @media screen and (max-width: 507px) {
+    #option1 {
+      font-size: 1.6rem;
+    }
+  }

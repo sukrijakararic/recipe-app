@@ -7,7 +7,10 @@ import { Meats } from "./query-params/Meats";
 import { Cuisine } from "./query-params/Cuisine";
 import { Type } from "./query-params/Type";
 import { Searches } from "./searchMethod/Searches";
+
 import { SearchExplanation } from "./searchMethod/SearchExplanation";
+import { SearchesHorizontal } from "./searchMethod/SearchesHorizontal";
+import { GetRandomPopularRecipe } from "./apiSettings/GetRandomPopularRecipe";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -28,12 +31,21 @@ function App() {
   return (
     <div>
       <Header />
-      {explanation === true ? <SearchExplanation /> : null}
-      <Searches setSearch={setSearch} setExplanation={setExplanation} />
+      
+        {explanation === true ? (
+          <>
+            <SearchExplanation />
+            <Searches setSearch={setSearch} setExplanation={setExplanation} />
+          </>
+        ) : null}
+      
 
       <div search={search}>
         {search === "option1" && explanation === false ? (
           <div className="App">
+            <SearchesHorizontal
+              setSearch={setSearch}
+            />
             <Type setType={setType} />
 
             <Cuisine setCuisine={setCuisine} />
@@ -48,7 +60,7 @@ function App() {
               type={type}
             />
           </div>
-        ) : search === "option2" && explanation === false ? null : null}
+        ) : search === "option2" && explanation === false ?(<> <SearchesHorizontal  setSearch={setSearch}/> <GetRandomPopularRecipe />  </>): null}
       </div>
     </div>
   );

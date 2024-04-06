@@ -8,15 +8,12 @@ export const SearchExplanation = () => {
     useEffect(() => {
         Aos.init();
       }, [])
-  useEffect(() => {
-    Aos.init();
-  }, []);
 
   return (
     <div data-aos="fade-right">
-      <h3 className={search.header}>
+      <h2 className={search.header}>
         Lets start by choosing how you want to search for recipes
-      </h3>
+      </h2>
     </div>
   );
 };

@@ -1,7 +1,14 @@
 
 .searchContainer {
 display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
+}
+
+.searchHorizontalContainer {
+    display:flex;
 }
 
 .optionDiv {
@@ -14,6 +21,8 @@ display:flex;
     align-items: center;
     margin: 3px;
     border-radius: 1rem;
+    width: 75%;
+    margin: 2rem;
 }
 
 .optionDiv:hover {
@@ -40,3 +49,9 @@ display:flex;
 .header {
     font-family: "Roboto",sans-serif;
 }
+
+@media screen and (min-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  }

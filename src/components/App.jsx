@@ -14,7 +14,7 @@ import { GetRandomPopularRecipe } from "./apiSettings/GetRandomPopularRecipe";
 
 function App() {
   const [search, setSearch] = useState("");
-  const [explanation, setExplanation] = useState(true);
+  const [show, setShow] = useState(true);
   const [type, setType] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
@@ -31,18 +31,17 @@ function App() {
   return (
     <div>
       <Header />
-
-      {explanation === true ? (
+      {show === false ? <SearchesHorizontal setSearch={setSearch} /> : null}
+      {show === true ? (
         <>
           <SearchExplanation />
-          <Searches setSearch={setSearch} setExplanation={setExplanation} />
+          <Searches setSearch={setSearch} setShow={setShow} />
         </>
       ) : null}
 
       <div search={search}>
-        {search === "option1" && explanation === false ? (
+        {search === "option1" && show === false ? (
           <div className="App">
-            <SearchesHorizontal setSearch={setSearch} />
             <Type setType={setType} />
 
             <Cuisine setCuisine={setCuisine} />
@@ -57,10 +56,9 @@ function App() {
               type={type}
             />
           </div>
-        ) : search === "option2" && explanation === false ? (
+        ) : search === "option2" && show === false ? (
           <>
             {" "}
-            <SearchesHorizontal setSearch={setSearch} />{" "}
             <GetRandomPopularRecipe />{" "}
           </>
         ) : null}

@@ -3,13 +3,13 @@ import search from "./search.module.css";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
-export const Searches = ({ setSearch, setExplanation }) => {
+export const Searches = ({ setSearch, setShow }) => {
   useEffect(() => {
     Aos.init();
   }, [])
   const handleClick = (event) => {
     setSearch(event.target.id);
-    setExplanation(false)
+    setShow(false)
   };
 
   return (

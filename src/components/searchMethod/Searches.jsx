@@ -15,19 +15,19 @@ export const Searches = ({ setSearch, setShow }) => {
   return (
     <div  className={search.searchContainer} data-aos="fade-right">
       <div className={search.optionDivVertical} onClick={handleClick}>
-        <p id="option1" className={search.option}>
+        <p id="option1" className={search.optionVertical}>
         Search by what I feel like eating
         </p>
       </div>
 
       <div onClick={handleClick} className={search.optionDivVertical}>
-        <p id="option2" className={search.option}>
+        <p id="option2" className={search.optionVertical}>
           Search by what's in my fridge
         </p>
       </div>
 
       <div onClick={handleClick} className={search.optionDivVertical}>
-        <p id="option3" className={search.option}>
+        <p id="option3" className={search.optionVertical}>
           I'm Feeling Adventurous
         </p>
       </div>

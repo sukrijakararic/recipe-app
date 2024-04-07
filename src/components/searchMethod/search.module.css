@@ -1,82 +1,95 @@
-
 .searchContainer {
-display:flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .searchHorizontalContainer {
-    display:flex;
+  display: flex;
 }
 
 .optionDivVertical {
-    border: 1px solid black;
-    width: 75%;
-    text-decoration: none;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border-radius: 1rem;
-    margin: 2rem;
-    
+  border: 1px solid black;
+  width: 75%;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 2rem;
 }
 
 .optionDivVertical:hover {
-    background-color: beige;
-    cursor: pointer;
+  background-color: beige;
+  cursor: pointer;
 }
 
 .optionDivVertical:active {
-    color: white;
+  color: white;
 }
 
 .optionDiv {
-    border: 1px solid black;
-    width: 100%;
-    text-decoration: none;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3px;
-    border-radius: 1rem;
-    
-    
+  border: 1px solid black;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  border-radius: 1rem;
 }
 
 .optionDiv:hover {
-    background-color: beige;
-    cursor: pointer;
+  background-color: beige;
+  cursor: pointer;
 }
 
 .optionDiv:active {
-    color: white;
+  color: white;
 }
 
-
-
-.option {
+.optionVertical {
     padding: 1em;
     margin: 0;
-   width: 100%;
+    width: 100%;
     text-align: center;
     font-size: 1.5rem;
     font-family: "Roboto", sans-serif;
     border-radius: 1rem;
+  }
+
+.option {
+  padding: 1em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 1rem;
 }
 
 .header {
-    font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @media screen and (max-width: 609px) {
-    .optionDivVertical {
-      width: 90%;
-      margin: 2rem 1rem;
-    }
+  .optionDivVertical {
+    width: 90%;
+    margin: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 1171px) {
+.option {
+    padding: 1rem;
+}
   }
 
+  @media screen and (max-width: 654px) {
+    .option {
+        padding: .3rem;
+    }
+      }

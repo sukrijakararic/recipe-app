@@ -12,7 +12,7 @@ export const SearchExplanation = () => {
   return (
     <div data-aos="fade-right">
       <h2 className={search.header}>
-        Lets start by choosing how you want to search for recipes
+        Let's start by choosing how you want to search for recipes
       </h2>
     </div>
   );

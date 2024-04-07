@@ -14,19 +14,19 @@ export const Searches = ({ setSearch, setExplanation }) => {
 
   return (
     <div  className={search.searchContainer} data-aos="fade-right">
-      <div className={search.optionDiv} onClick={handleClick}>
+      <div className={search.optionDivVertical} onClick={handleClick}>
         <p id="option1" className={search.option}>
         Search by what I feel like eating
         </p>
       </div>
 
-      <div onClick={handleClick} className={search.optionDiv}>
+      <div onClick={handleClick} className={search.optionDivVertical}>
         <p id="option2" className={search.option}>
-          Search by whats in your fridge
+          Search by what's in my fridge
         </p>
       </div>
 
-      <div onClick={handleClick} className={search.optionDiv}>
+      <div onClick={handleClick} className={search.optionDivVertical}>
         <p id="option3" className={search.option}>
           I'm Feeling Adventurous
         </p>

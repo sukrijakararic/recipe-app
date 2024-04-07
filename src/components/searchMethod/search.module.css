@@ -11,6 +11,29 @@ align-items: center;
     display:flex;
 }
 
+.optionDivVertical {
+    border: 1px solid black;
+    width: 75%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 1rem;
+    margin: 2rem;
+    
+}
+
+.optionDivVertical:hover {
+    background-color: beige;
+    cursor: pointer;
+}
+
+.optionDivVertical:active {
+    color: white;
+}
+
 .optionDiv {
     border: 1px solid black;
     width: 100%;
@@ -21,6 +44,7 @@ align-items: center;
     align-items: center;
     margin: 3px;
     border-radius: 1rem;
+    
     
 }
 
@@ -48,4 +72,11 @@ align-items: center;
 .header {
     font-family: "Roboto",sans-serif;
 }
+
+@media screen and (max-width: 609px) {
+    .optionDivVertical {
+      width: 90%;
+      margin: 2rem 1rem;
+    }
+  }
 

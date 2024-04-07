@@ -31,21 +31,18 @@ function App() {
   return (
     <div>
       <Header />
-      
-        {explanation === true ? (
-          <>
-            <SearchExplanation />
-            <Searches setSearch={setSearch} setExplanation={setExplanation} />
-          </>
-        ) : null}
-      
+
+      {explanation === true ? (
+        <>
+          <SearchExplanation />
+          <Searches setSearch={setSearch} setExplanation={setExplanation} />
+        </>
+      ) : null}
 
       <div search={search}>
         {search === "option1" && explanation === false ? (
           <div className="App">
-            <SearchesHorizontal
-              setSearch={setSearch}
-            />
+            <SearchesHorizontal setSearch={setSearch} />
             <Type setType={setType} />
 
             <Cuisine setCuisine={setCuisine} />
@@ -60,7 +57,13 @@ function App() {
               type={type}
             />
           </div>
-        ) : search === "option2" && explanation === false ?(<> <SearchesHorizontal  setSearch={setSearch}/> <GetRandomPopularRecipe />  </>): null}
+        ) : search === "option2" && explanation === false ? (
+          <>
+            {" "}
+            <SearchesHorizontal setSearch={setSearch} />{" "}
+            <GetRandomPopularRecipe />{" "}
+          </>
+        ) : null}
       </div>
     </div>
   );

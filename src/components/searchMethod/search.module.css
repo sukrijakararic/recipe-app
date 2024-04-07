@@ -91,5 +91,12 @@
   @media screen and (max-width: 654px) {
     .option {
         padding: .3rem;
+        font-size: 1.3rem;
     }
       }
+
+      @media screen and (max-width: 424px) {
+        .optionVertical {
+            font-size: 1.3rem;
+        }
+          }

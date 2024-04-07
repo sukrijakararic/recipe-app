@@ -1,24 +1,23 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import apiStyling from "./apiStyling.module.css";
 import 'animate.css';
+
 
 const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 
 export const GetRandomRecipe = ({
   protein,
   cuisine,
-  setComplex,
-  complex,
-  type,
+  type
 }) => {
   useEffect(() => {
     Aos.init();
   }, []);
 
   const offset = Math.floor(Math.random() * 9);
-
+  const [complex, setComplex] = useState([]);
   const getRandomComplexRecipe = async () => {
     try {
       const response = await fetch(

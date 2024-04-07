@@ -18,7 +18,7 @@ function App() {
   const [type, setType] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
-  const [complex, setComplex] = useState([]);
+  
 
   const [welcome, setWelcome] = useState(true);
   useEffect(() => {
@@ -51,8 +51,6 @@ function App() {
             <GetRandomRecipe
               protein={protein}
               cuisine={cuisine}
-              setComplex={setComplex}
-              complex={complex}
               type={type}
             />
           </div>

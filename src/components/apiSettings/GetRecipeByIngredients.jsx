@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const GetRandomPopularRecipe = () => {
+export const GetRecipeByIngredients = () => {
   return (
     <div>Work in Progress</div>
   )

@@ -7,10 +7,10 @@ import { Meats } from "./query-params/Meats";
 import { Cuisine } from "./query-params/Cuisine";
 import { Type } from "./query-params/Type";
 import { Searches } from "./searchMethod/Searches";
-
 import { SearchExplanation } from "./searchMethod/SearchExplanation";
 import { SearchesHorizontal } from "./searchMethod/SearchesHorizontal";
 import { GetRandomPopularRecipe } from "./apiSettings/GetRandomPopularRecipe";
+import { GetRecipeByIngredients } from "./apiSettings/GetRecipeByIngredients";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -18,7 +18,6 @@ function App() {
   const [type, setType] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
-  
 
   const [welcome, setWelcome] = useState(true);
   useEffect(() => {
@@ -48,18 +47,16 @@ function App() {
 
             <Meats setProtein={setProtein} />
 
-            <GetRandomRecipe
-              protein={protein}
-              cuisine={cuisine}
-              type={type}
-            />
+            <GetRandomRecipe protein={protein} cuisine={cuisine} type={type} />
           </div>
         ) : search === "option2" && show === false ? (
           <>
             {" "}
-            <GetRandomPopularRecipe />{" "}
+            <GetRecipeByIngredients />{" "}
           </>
-        ) : null}
+        ) : (
+          <GetRandomPopularRecipe />
+        )}
       </div>
     </div>
   );

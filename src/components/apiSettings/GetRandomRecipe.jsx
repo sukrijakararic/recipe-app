@@ -2,21 +2,17 @@ import { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import apiStyling from "./apiStyling.module.css";
-import 'animate.css';
-
+import "animate.css";
 
 const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
 
-export const GetRandomRecipe = ({
-  protein,
-  cuisine,
-  type
-}) => {
+export const GetRandomRecipe = ({ protein, cuisine, type }) => {
   useEffect(() => {
     Aos.init();
   }, []);
 
   const offset = Math.floor(Math.random() * 9);
+  const regex = /(<([^>]+)>)/gi;
   const [complex, setComplex] = useState([]);
   const getRandomComplexRecipe = async () => {
     try {
@@ -43,7 +39,8 @@ export const GetRandomRecipe = ({
         <div className="animate__animated animate__bounceIn">
           <h3>And finally,</h3>
           <button onClick={handleClick}>
-            <span className={apiStyling.lets}>Lets</span> <span className={apiStyling.eat}>Eat!</span>
+            <span className={apiStyling.lets}>Lets</span>{" "}
+            <span className={apiStyling.eat}>Eat!</span>
           </button>
         </div>
       ) : (
@@ -56,25 +53,19 @@ export const GetRandomRecipe = ({
             <div className={apiStyling.results}>
               <div className={apiStyling.imageContainer}>
                 <img src={recipe.image} alt="a picture of the food" />
-                <p>Ready in {recipe.readyInMinutes} minutes</p>
-                <h4>Here's what you'll need</h4>
+                <h4>Important Info:</h4>
                 <ul>
-                  {recipe.extendedIngredients.map((ingredient) => {
-                    return <li key={self.crypto.randomUUID()}>{ingredient.original}</li>;
-                  })}
+                  <li>Ready in {recipe.readyInMinutes} minutes</li>
+                  <li>{recipe.dishTypes[0]}</li>
+                  <li>Servings: {recipe.servings}</li>
+                  <li>Healthscore: {recipe.healthScore}</li>
                 </ul>
               </div>
-              <div className={apiStyling.ingredientList}>
-                <h3>Instructions</h3>
-                <div>
-                  {recipe.analyzedInstructions[0].steps.map((steps) => {
-                    return (
-                      <p key={steps.number}>
-                        {steps.number}. {steps.step}
-                      </p>
-                    );
-                  })}
-                </div>
+              <div className={apiStyling.metaData}>
+                <p className={apiStyling.summary}>
+                  {recipe.summary.replace(regex, "")}
+                </p>
+                <a href={recipe.sourceUrl} target="_blank" className={apiStyling.anchor}><p>👉Click here for the full recipe👈</p></a>
               </div>
             </div>
           </div>

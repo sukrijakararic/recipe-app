@@ -6,6 +6,7 @@
   border-radius: 1rem;
   background-color: burlywood;
   padding: 5px;
+  align-items: center;
 }
 
 img {
@@ -15,10 +16,6 @@ img {
   box-shadow: 5px 5px 10px rgb(182, 138, 80);
   text-align: left;
   
-}
-
-p {
-  text-align: left;
 }
 
 h4 {
@@ -66,9 +63,21 @@ box-shadow: none;
   font-size: 1.5rem;
 }
 
-.ingredientList {
-    text-align: left;
-    margin: 0 2rem 0 2rem;
+.summary {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 1rem;
+  text-align: left;
+}
+
+.anchor {
+  color: beige;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.anchor:active {
+  color: white;
 }
 
 .imageContainer {

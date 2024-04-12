@@ -25,7 +25,7 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
       console.log(resultsFromArray);
       setComplex(resultsFromArray);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 

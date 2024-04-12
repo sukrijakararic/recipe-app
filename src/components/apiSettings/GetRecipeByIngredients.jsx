@@ -1,30 +1,25 @@
-import { useState, useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import apiStyling from "./apiStyling.module.css";
-import "animate.css";
-
-
-const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
+import React from "react";
 
 export const GetRecipeByIngredients = () => {
+  const getRecipeByIngredients = async () => {
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/todos/1"
+      );
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  useEffect(() => {
-    Aos.init();
-  }, []);
-
-  const [ingredientslist, setIngredientslist] = useState([]);
-
-  try {
-    
-  } catch (error) {
-    console.log(error);
-  }
+  const handleClick = () => {
+    getRecipeByIngredients();
+  };
 
   return (
     <div>
-
-
+      <button onClick={handleClick}>Get Recipe By Ingredients</button>
     </div>
-  )
-}
+  );
+};

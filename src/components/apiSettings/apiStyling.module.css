@@ -15,7 +15,6 @@ img {
   border-radius: 1rem;
   box-shadow: 5px 5px 10px rgb(182, 138, 80);
   text-align: left;
-  
 }
 
 h4 {
@@ -32,11 +31,10 @@ button {
   font-family: "modak", sans-serif;
   border: 1px solid bisque;
   font-size: 1.3rem;
-  border-radius: .5rem;
-  padding: .3rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
   box-shadow: 5px 5px 3px burlywood;
   margin-bottom: 2rem;
-
 }
 
 button:hover {
@@ -46,18 +44,17 @@ button:hover {
 }
 
 button:active {
-box-shadow: none;
-transform: scale(0.9);
-
+  box-shadow: none;
+  transform: scale(0.9);
 }
 
 .lets {
-  font-family: "Pacifico",sans-serif;
+  font-family: "Pacifico", sans-serif;
   color: green;
 }
 
 .eat {
-  font-family: "modak",sans-serif;
+  font-family: "modak", sans-serif;
   color: brown;
 }
 .recipeTitle {
@@ -71,6 +68,7 @@ transform: scale(0.9);
   line-height: 2.5rem;
   margin: 1rem;
   text-align: left;
+
 }
 
 .anchor {
@@ -85,16 +83,15 @@ transform: scale(0.9);
 
 .imageContainer {
   margin: 0 1rem 2rem 2rem;
-
 }
 
 @media screen and (max-width: 619px) {
-img {
-  width: 20rem;
-  height: 12rem;
-}
-
-    .results {
-        flex-wrap: wrap;
-    }
+  img {
+    width: 20rem;
+    height: 12rem;
   }
+
+  .results {
+    flex-wrap: wrap;
+  }
+}

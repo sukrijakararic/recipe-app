@@ -59,6 +59,8 @@
 
 .optionDiv:active {
   color: white;
+  transform: scale(0.9);
+ 
   
 }
 

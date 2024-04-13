@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ingredientStyling from "./ingredientStyling.module.css";
 
-export const IngredientsArray = ({ ingredArray, needed }) => {
+export const IngredientsArray = ({ ingredArray }) => {
 
 
 

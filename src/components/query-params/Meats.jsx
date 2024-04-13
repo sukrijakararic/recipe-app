@@ -16,37 +16,51 @@ export const Meats = ({ setProtein }) => {
       <h3>Then, a protein</h3>
 
       <div className={choices.formContainer}>
-      <form className={choices.meats} id={choices.lastForm}>
-        <div>
-          <input
-            onClick={handleClick}
-            type="radio"
-            id="chicken,"
-            name="protein"
-          />
-          <label htmlFor="chicken,">Chicken</label>
-        </div>
+        <form className={choices.radioForm} id={choices.lastForm}>
+          <div>
+            <input
+              className={choices.radioButtons}
+              onClick={handleClick}
+              type="radio"
+              id="chicken,"
+              name="protein"
+            />
+            <label htmlFor="chicken,">Chicken</label>
+          </div>
 
-        <div>
-          <input onClick={handleClick} type="radio" id="beef," name="protein" />
-          <label htmlFor="beef,">Beef</label>
-        </div>
+          <div>
+            <input
+              className={choices.radioButtons}
+              onClick={handleClick}
+              type="radio"
+              id="beef,"
+              name="protein"
+            />
+            <label htmlFor="beef,">Beef</label>
+          </div>
 
-        <div>
-          <input onClick={handleClick} type="radio" id="fish," name="protein" />
-          <label htmlFor="fish,">Fish</label>
-        </div>
+          <div>
+            <input
+              className={choices.radioButtons}
+              onClick={handleClick}
+              type="radio"
+              id="fish,"
+              name="protein"
+            />
+            <label htmlFor="fish,">Fish</label>
+          </div>
 
-        <div>
-          <input
-            onClick={handleClick}
-            type="radio"
-            name="protein"
-            id="&diet=vegetarian,"
-          />
-          <label htmlFor="&diet=vegetarian,">Vegetarian</label>
-        </div>
-      </form>
+          <div>
+            <input
+              className={choices.radioButtons}
+              onClick={handleClick}
+              type="radio"
+              name="protein"
+              id="&diet=vegetarian,"
+            />
+            <label htmlFor="&diet=vegetarian,">Vegetarian</label>
+          </div>
+        </form>
       </div>
     </div>
   );

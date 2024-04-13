@@ -11,6 +11,8 @@ import { SearchExplanation } from "./searchMethod/SearchExplanation";
 import { SearchesHorizontal } from "./searchMethod/SearchesHorizontal";
 import { GetRandomPopularRecipe } from "./apiSettings/GetRandomPopularRecipe";
 import { GetRecipeByIngredients } from "./apiSettings/GetRecipeByIngredients";
+import { IngredientsInputTextbox } from "./ingredientsInput/IngredientsInputTextbox";
+import { IngredientsArray } from "./ingredientsInput/IngredientsArray";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -18,6 +20,7 @@ function App() {
   const [type, setType] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
+  const [ingredArray, setIngredArray] = useState([])
 
   const [welcome, setWelcome] = useState(true);
   useEffect(() => {
@@ -50,7 +53,11 @@ function App() {
             <GetRandomRecipe protein={protein} cuisine={cuisine} type={type} />
           </div>
         ) : search === "option2" && show === false ? (
-          <GetRecipeByIngredients />
+          <div>
+          <IngredientsInputTextbox setIngredArray={setIngredArray}/>
+          <IngredientsArray ingredArray={ingredArray} id={ingredArray.id} />
+          <GetRecipeByIngredients ingredArrayText={ingredArray}/>
+          </div>
         ) : search === "option3" && show === false ? (
           <GetRandomPopularRecipe />
         ) : null}

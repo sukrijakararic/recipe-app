@@ -9,7 +9,7 @@
   margin-bottom: 0;
 }
 
-form {
+.radioForm {
   margin: 0 1rem 3rem 1rem;
   padding: 1.5rem;
   display: flex;
@@ -23,7 +23,7 @@ form {
   
 }
 
-form div {
+.radioForm div {
   border-radius: 0.5rem;
   border: 1px solid bisque;
   box-shadow: 7px 6px 10px burlywood;
@@ -32,16 +32,16 @@ form div {
   margin: .4rem;
 }
 
-form div:hover {
+.radioForm div:hover {
   background-color: #fdfd96;
   cursor: pointer;
 }
 
-form div:active {
+.radioForm div:active {
   box-shadow: 4px 4px 4px burlywood;
 }
 
-form div:has(input:checked) {
+.radioForm div:has(input:checked) {
   background-color: #f2cc43;
 }
 
@@ -55,14 +55,14 @@ label:hover {
   cursor: pointer;
 }
 
-input {
+.radioButtons {
   display: none;
 }
 
 
 
 @media screen and (max-width: 825px) {
-  form {
+  .radioForm {
     width: 100%;
   }
 }

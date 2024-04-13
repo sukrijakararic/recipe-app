@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 const apiKey = "apiKey=4bf6c458c2cf48b4ab3bc26b7eda5a57";
-export const GetRecipeByIngredients = () => {
+export const GetRecipeByIngredients = ({ingredArray}) => {
+
+  const offset = Math.floor(Math.random() * 9);
   const [ingredientsRecipe, setIngredientsRecipe] = useState([]);
   const callRecipeApiForIngredients = async () => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&includeIngredients=apples,flour,sugar,milk&number=5&&addRecipeInformation=true`
+        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&offset=${offset}&includeIngredients=apples&sort=max-used-ingredients&number=5&&addRecipeInformation=true&addRecipeInstructions=true&addRecipeNutrition=true`
       );
       const jsonResponse = await response.json();
       console.log(jsonResponse);

@@ -19,15 +19,20 @@
   align-items: center;
   border-radius: 1rem;
   margin: 2rem;
+  background-color: beige;
+  box-shadow: 10px 10px 10px burlywood;
 }
 
 .optionDivVertical:hover {
   background-color: beige;
   cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 .optionDivVertical:active {
   color: white;
+  transform: scale(0.9);
 }
 
 .optionDiv {
@@ -40,15 +45,21 @@
   align-items: center;
   margin: 3px;
   border-radius: 1rem;
+  background-color: beige;
+  box-shadow: 10px 10px 10px burlywood;
 }
 
 .optionDiv:hover {
   background-color: beige;
   cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.2s;
+  text-decoration: underline;
 }
 
 .optionDiv:active {
   color: white;
+  
 }
 
 .optionVertical {

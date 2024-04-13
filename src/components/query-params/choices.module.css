@@ -35,10 +35,13 @@
 .radioForm div:hover {
   background-color: #fdfd96;
   cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 .radioForm div:active {
   box-shadow: 4px 4px 4px burlywood;
+  transform: scale(0.9);
 }
 
 .radioForm div:has(input:checked) {

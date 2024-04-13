@@ -56,7 +56,7 @@ function App() {
           <div>
           <IngredientsInputTextbox setIngredArray={setIngredArray}/>
           <IngredientsArray ingredArray={ingredArray} id={ingredArray.id} />
-          <GetRecipeByIngredients ingredArrayText={ingredArray}/>
+          <GetRecipeByIngredients ingredArray={ingredArray}/>
           </div>
         ) : search === "option3" && show === false ? (
           <GetRandomPopularRecipe />

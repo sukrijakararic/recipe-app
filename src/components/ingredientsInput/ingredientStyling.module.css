@@ -16,6 +16,21 @@
    
 }
 
+.ingredientIcon {
+    width: 1.3rem;
+    margin: .4rem;
+}
+
+.ingredientIcon:hover {
+    cursor: pointer;
+}
+
+.ingredientIcon:active {    
+    transform: scale(0.9);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
 .ingredientButton {
     margin: 2rem;
 }
@@ -31,6 +46,9 @@
     border: 1px solid black;
     margin: 1rem;
     width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ingredient p {

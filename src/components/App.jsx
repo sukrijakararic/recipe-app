@@ -22,6 +22,7 @@ function App() {
   const [protein, setProtein] = useState("");
   const [ingredArray, setIngredArray] = useState([])
 
+
   const [welcome, setWelcome] = useState(true);
   useEffect(() => {
     setTimeout(() => setWelcome(false), 2500);
@@ -55,7 +56,7 @@ function App() {
         ) : search === "option2" && show === false ? (
           <div>
           <IngredientsInputTextbox setIngredArray={setIngredArray}/>
-          <IngredientsArray ingredArray={ingredArray} id={ingredArray.id} />
+          <IngredientsArray ingredArray={ingredArray} />
           <GetRecipeByIngredients ingredArray={ingredArray}/>
           </div>
         ) : search === "option3" && show === false ? (

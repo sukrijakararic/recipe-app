@@ -20,8 +20,7 @@ function App() {
   const [type, setType] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [protein, setProtein] = useState("");
-  const [ingredArray, setIngredArray] = useState([])
-
+  const [ingredArray, setIngredArray] = useState([]);
 
   const [welcome, setWelcome] = useState(true);
   useEffect(() => {
@@ -55,9 +54,12 @@ function App() {
           </div>
         ) : search === "option2" && show === false ? (
           <div>
-          <IngredientsInputTextbox setIngredArray={setIngredArray}/>
-          <IngredientsArray ingredArray={ingredArray} />
-          <GetRecipeByIngredients ingredArray={ingredArray}/>
+            <IngredientsInputTextbox setIngredArray={setIngredArray} />
+            <IngredientsArray
+              ingredArray={ingredArray}
+              setIngredArray={setIngredArray}
+            />
+            <GetRecipeByIngredients ingredArray={ingredArray} />
           </div>
         ) : search === "option3" && show === false ? (
           <GetRandomPopularRecipe />

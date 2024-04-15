@@ -3,6 +3,12 @@ import ingredientStyling from "./ingredientStyling.module.css";
 
 export const IngredientsArray = ({ ingredArray, setIngredArray }) => {
 
+/**
+ * Deletes an item from the ingredArray based on the provided id.
+ *
+ * @param {string} id - The id of the item to be deleted.
+ * @return {void} This function does not return a value.
+ */
   const handleDelete = (id) => {
     const newArrayAfterDeletion = ingredArray.filter((ingredient) => ingredient.id !== id);
     setIngredArray(newArrayAfterDeletion);

@@ -16,7 +16,7 @@ export const Searches = ({ setSearch, setShow }) => {
     <div  className={search.searchContainer} data-aos="fade-right">
       <div className={search.optionDivVertical} onClick={handleClick}>
         <p id="option1" className={search.optionVertical}>
-        Search by what I feel like eating
+        Search by what you feel like eating
         </p>
       </div>
 

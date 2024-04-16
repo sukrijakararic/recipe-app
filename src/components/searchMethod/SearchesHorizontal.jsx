@@ -13,7 +13,7 @@ export const SearchesHorizontal = ({ setSearch }) => {
     <div  className={search.searchHorizontalContainer} >
       <div className={search.optionDiv} onClick={handleClick}>
         <p id="option1" className={search.option}>
-        Search by what I feel like eating
+        Search by what you feel like eating
         </p>
       </div>
 

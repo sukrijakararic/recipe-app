@@ -22,7 +22,7 @@ export const Searches = ({ setSearch, setShow }) => {
 
       <div onClick={handleClick} className={search.optionDivVertical}>
         <p id="option2" className={search.optionVertical}>
-          Search by what's in my fridge
+          Search by what's in your fridge
         </p>
       </div>
 

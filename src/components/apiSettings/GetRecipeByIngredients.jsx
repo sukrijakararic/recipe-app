@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import apiStyling from "./apiStyling.module.css";
+import "animate.css";
 
 const apiKey = "apiKey=4bf6c458c2cf48b4ab3bc26b7eda5a57";
 export const GetRecipeByIngredients = ({ ingredArray }) => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const offset = Math.floor(Math.random() * 9);
   const [ingredientsRecipe, setIngredientsRecipe] = useState([]);
-
+  const regex = /(<([^>]+)>|\.+\s*$)/gi;
   const ingredientText = ingredArray.map((ingred) => ingred.text).join(",");
   const callRecipeApiForIngredients = async () => {
     try {
@@ -27,16 +34,30 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
   return (
     <div>
       <button onClick={handleClick}>Get Recipe By Ingredients</button>
-      {ingredientsRecipe.map((recipe) => (
-        <div key={recipe.id}>
-          <h3>{recipe.title}</h3>
-          <img src={recipe.image} alt={recipe.title} />
-          <br></br>
-          <a href={recipe.sourceUrl} target="_blank">
-            Click Me
-          </a>
-        </div>
-      ))}
+      {ingredientsRecipe.map((recipe) => {
+        const summaryWithoutTags = recipe.summary.replace(regex, " ");
+        const summaryWithoutLastSentence = summaryWithoutTags.replace(
+          /(?<=\.\s)[^.]*$/,
+          ""
+        );
+        return (
+          <div key={recipe.id} data-aos="fade-right">
+            <p className={apiStyling.recipeTitle}>{recipe.title}</p>
+            <img src={recipe.image} alt={recipe.title} />
+            <br></br>
+            <p className={apiStyling.summaryIngredients}>
+              {summaryWithoutLastSentence}
+            </p>
+            <a
+              href={recipe.sourceUrl}
+              target="_blank"
+              className={apiStyling.anchor}
+            >
+              <p>👉Click here for the full recipe👈</p>
+            </a>
+          </div>
+        );
+      })}
     </div>
   );
 };

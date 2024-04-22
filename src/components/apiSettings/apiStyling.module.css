@@ -71,6 +71,14 @@ button:active {
 
 }
 
+.summaryIngredients {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  margin: 1rem;
+  text-align: center;
+
+}
+
 .anchor {
   color: beige;
   text-decoration: none;

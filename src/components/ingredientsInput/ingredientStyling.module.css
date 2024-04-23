@@ -1,57 +1,55 @@
-
 .ingredientForm {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ingredientTextbox {
-    width: 90%;
-    height: 2rem;
-    border-radius: 0.5rem;
-    border: 1px solid black;
-    margin: 0.5rem;
-   
+.ingredientInput {
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 0.4rem;
 }
 
 .ingredientIcon {
-    width: 1.3rem;
-    margin: .4rem;
+  width: 1.3rem;
+  margin: 0.4rem;
 }
 
 .ingredientIcon:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.ingredientIcon:active {    
-    transform: scale(0.9);
-    transition: 0.2s;
-    cursor: pointer;
+.ingredientIcon:active {
+  transform: scale(0.9);
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .ingredientButton {
-    margin: 2rem;
+  margin: 2rem;
 }
 
 .ingredientsArrayContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: beige;
+  margin: 10px;
+  border-radius: 0.5rem;
 }
 
 .ingredient {
-    border: 1px solid black;
-    margin: 1rem;
-    width: 75%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 1px solid black;
+  margin: 1rem;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
 }
 
 .ingredient p {
-    font-size: 1rem;
-    font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 }

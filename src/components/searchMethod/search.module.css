@@ -84,7 +84,7 @@
   margin: 0;
   width: 100%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: "Roboto", sans-serif;
   border-radius: 1rem;
 }
@@ -103,7 +103,7 @@
 @media screen and (max-width: 654px) {
   .option {
     padding: 0.3rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 

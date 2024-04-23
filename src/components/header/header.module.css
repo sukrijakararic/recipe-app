@@ -1,8 +1,9 @@
 .header {
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid rgb(141, 118, 89);
   padding: 0.5rem;
   text-align: center;
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .good {

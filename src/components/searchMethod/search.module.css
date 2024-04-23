@@ -23,7 +23,6 @@
   border-radius: 1rem;
   margin: 2rem;
   background-color: beige;
-  box-shadow: 10px 10px 10px burlywood;
 }
 
 .optionDivVertical:hover {
@@ -31,6 +30,7 @@
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.2s;
+  box-shadow: 10px 10px 10px burlywood;
 }
 
 .optionDivVertical:active {
@@ -38,7 +38,16 @@
   transform: scale(0.9);
 }
 
-.optionDiv {
+
+
+.optionDiv:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+
+/*.optionDiv {
   border: 1px solid black;
   text-decoration: none;
   color: black;
@@ -67,7 +76,7 @@
   transform: scale(0.9);
  
   
-}
+}*/
 
 .optionVertical {
   padding: 1em;

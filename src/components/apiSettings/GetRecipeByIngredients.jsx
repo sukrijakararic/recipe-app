@@ -33,7 +33,10 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
 
   return (
     <div>
-      <button onClick={handleClick}>Get Recipe By Ingredients</button>
+
+      { ingredientText ? ( <button className="animate__animated animate__bounceIn" onClick={handleClick}>Get Recipe By Ingredients</button> ) : <></>
+      }
+    
       {ingredientsRecipe.map((recipe) => {
         const summaryWithoutTags = recipe.summary.replace(regex, " ");
         const summaryWithoutLastSentence = summaryWithoutTags.replace(

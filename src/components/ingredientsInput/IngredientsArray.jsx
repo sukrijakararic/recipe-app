@@ -18,9 +18,11 @@ export const IngredientsArray = ({ ingredArray, setIngredArray }) => {
     <div className={ingredientStyling.ingredientsArrayContainer}>
       {ingredArray.map((ingredient) => (
         <div
+  
+        
           key={ingredient.id}
-          className={ingredientStyling.ingredient}
-          id="ingredient"
+          className="animate__animated animate__bounceIn"
+          id={ingredientStyling.ingredient}
         >
           <p>{ingredient.text}</p>
 

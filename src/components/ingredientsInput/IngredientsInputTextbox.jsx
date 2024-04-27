@@ -19,7 +19,6 @@ export const IngredientsInputTextbox = ({ setIngredArray }) => {
   };
   return (
     <div>
-      <h3>This Feature is still a work in progress!</h3>
       <form
         onSubmit={handleSubmit}
         className={ingredientStyling.ingredientForm}

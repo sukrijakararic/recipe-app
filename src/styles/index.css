@@ -21,3 +21,7 @@ html::-webkit-scrollbar-thumb {
   background-color: burlywood;
   border: 1px solid beige;
 }
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}

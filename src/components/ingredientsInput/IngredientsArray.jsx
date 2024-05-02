@@ -17,7 +17,7 @@ export const IngredientsArray = ({ ingredArray, setIngredArray }) => {
 
   return (
     <div className={ingredientStyling.arrayHolder}>
-    <div className={ingredientStyling.ingredientsArrayContainer}>
+    <div id={ingredientStyling.ingredientsArrayContainer} className="animate__animated animate__bounceIn">
       {ingredArray.length > 0 && (
         <h2>fridge 🧊</h2>
       )}

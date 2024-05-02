@@ -16,6 +16,7 @@ export const IngredientsArray = ({ ingredArray, setIngredArray }) => {
   };
 
   return (
+    <div className={ingredientStyling.arrayHolder}>
     <div className={ingredientStyling.ingredientsArrayContainer}>
       {ingredArray.length > 0 && (
         <h2>fridge 🧊</h2>
@@ -46,6 +47,7 @@ export const IngredientsArray = ({ ingredArray, setIngredArray }) => {
           </svg>
         </div>
       ))}
+    </div>
     </div>
   );
 };

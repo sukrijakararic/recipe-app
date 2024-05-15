@@ -54,7 +54,7 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
             <p className={apiStyling.recipeTitle}>{recipe.title}</p>
             <div className={apiStyling.results}>
               <div className={apiStyling.imageContainer}>
-                <img src={recipe.image} alt="a picture of the food" />
+                <img src={recipe.image} alt={recipe.title} />
                 <h4>Important Info:</h4>
                 <ul>
                   <li>Ready in {recipe.readyInMinutes} minutes</li>

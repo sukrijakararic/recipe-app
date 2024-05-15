@@ -46,18 +46,22 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
         return (
           <div key={recipe.id} data-aos="fade-right">
             <p className={apiStyling.recipeTitle}>{recipe.title}</p>
-            <img src={recipe.image} alt={recipe.title} />
-            <br></br>
-            <p className={apiStyling.summaryIngredients}>
-              {summaryWithoutLastSentence}
-            </p>
-            <a
-              href={recipe.sourceUrl}
-              target="_blank"
-              className={apiStyling.anchor}
-            >
-              <p>👉Click here for the full recipe👈</p>
-            </a>
+            <div className={apiStyling.results}>
+              <div className={apiStyling.imageContainer}>
+                <img src={recipe.image} alt={recipe.title} />
+                <h4>Important Info:</h4>
+                <ul>
+                  <li>Ready in {recipe.readyInMinutes} minutes</li>
+                  <li>{recipe.dishTypes[0]}</li>
+                  <li>Servings: {recipe.servings}</li>
+                  <li>Healthscore: {recipe.healthScore}</li>
+                </ul>
+              </div>
+              <div className={apiStyling.metaData}>
+                <p className={apiStyling.summary}>{summaryWithoutLastSentence}</p>
+                <a href={recipe.sourceUrl} target="_blank" className={apiStyling.anchor}><p>👉Click here for the full recipe👈</p></a>
+              </div>
+            </div>
           </div>
         );
       })}

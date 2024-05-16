@@ -6,7 +6,6 @@ import "animate.css";
 
 const apiKey = "91e5d21482464f81a6df62753eb70fe6";
 export const GetRandomPopularRecipe = () => {
-
   useEffect(() => {
     Aos.init();
   }, []);
@@ -30,7 +29,10 @@ export const GetRandomPopularRecipe = () => {
   const regex = /(<([^>]+)>|\.+\s*$)/gi;
   return (
     <div>
-      <button onClick={handleClick} className="animate__animated animate__bounce">
+      <button
+        onClick={handleClick}
+        className="animate__animated animate__bounce"
+      >
         <span className={apiStyling.lets}>Lets</span>{" "}
         <span className={apiStyling.eat}>Eat!</span>
       </button>
@@ -42,7 +44,7 @@ export const GetRandomPopularRecipe = () => {
           ""
         );
         return (
-<div key={recipe.id} data-aos="fade-right">
+          <div key={recipe.id} data-aos="fade-right">
             <p className={apiStyling.recipeTitle}>{recipe.title}</p>
             <div className={apiStyling.results}>
               <div className={apiStyling.imageContainer}>
@@ -56,8 +58,16 @@ export const GetRandomPopularRecipe = () => {
                 </ul>
               </div>
               <div className={apiStyling.metaData}>
-                <p className={apiStyling.summary}>{summaryWithoutLastSentence}</p>
-                <a href={recipe.sourceUrl} target="_blank" className={apiStyling.anchor}><p>👉Click here for the full recipe👈</p></a>
+                <p className={apiStyling.summary}>
+                  {summaryWithoutLastSentence}
+                </p>
+                <a
+                  href={recipe.sourceUrl}
+                  target="_blank"
+                  className={apiStyling.anchor}
+                >
+                  <p>👉Click here for the full recipe👈</p>
+                </a>
               </div>
             </div>
           </div>

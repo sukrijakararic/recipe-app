@@ -33,13 +33,18 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
 
   return (
     <div>
+      {ingredientText ? (
+        <button
+          onClick={handleClick}
+          className="animate__animated animate__bounce"
+        >
+          <span className={apiStyling.lets}>Lets</span>{" "}
+          <span className={apiStyling.eat}>Eat!</span>
+        </button>
+      ) : (
+        <></>
+      )}
 
-      { ingredientText ? (       <button onClick={handleClick} className="animate__animated animate__bounce">
-        <span className={apiStyling.lets}>Lets</span>{" "}
-        <span className={apiStyling.eat}>Eat!</span>
-      </button> ) : <></>
-      }
-    
       {ingredientsRecipe.map((recipe) => {
         const summaryWithoutTags = recipe.summary.replace(regex, " ");
         const summaryWithoutLastSentence = summaryWithoutTags.replace(
@@ -61,8 +66,16 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
                 </ul>
               </div>
               <div className={apiStyling.metaData}>
-                <p className={apiStyling.summary}>{summaryWithoutLastSentence}</p>
-                <a href={recipe.sourceUrl} target="_blank" className={apiStyling.anchor}><p>👉Click here for the full recipe👈</p></a>
+                <p className={apiStyling.summary}>
+                  {summaryWithoutLastSentence}
+                </p>
+                <a
+                  href={recipe.sourceUrl}
+                  target="_blank"
+                  className={apiStyling.anchor}
+                >
+                  <p>👉Click here for the full recipe👈</p>
+                </a>
               </div>
             </div>
           </div>

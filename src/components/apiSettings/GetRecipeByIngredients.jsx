@@ -34,7 +34,10 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
   return (
     <div>
 
-      { ingredientText ? ( <button className="animate__animated animate__bounceIn" onClick={handleClick}>Get Recipe By Ingredients</button> ) : <></>
+      { ingredientText ? (       <button onClick={handleClick} className="animate__animated animate__bounce">
+        <span className={apiStyling.lets}>Lets</span>{" "}
+        <span className={apiStyling.eat}>Eat!</span>
+      </button> ) : <></>
       }
     
       {ingredientsRecipe.map((recipe) => {

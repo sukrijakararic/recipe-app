@@ -30,7 +30,7 @@ export const GetRandomPopularRecipe = () => {
   const regex = /(<([^>]+)>|\.+\s*$)/gi;
   return (
     <div>
-      <button onClick={handleClick}>
+      <button onClick={handleClick} className="animate__animated animate__bounce">
         <span className={apiStyling.lets}>Lets</span>{" "}
         <span className={apiStyling.eat}>Eat!</span>
       </button>

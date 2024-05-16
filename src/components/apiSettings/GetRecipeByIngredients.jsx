@@ -16,7 +16,7 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
   const callRecipeApiForIngredients = async () => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&offset=${offset}&includeIngredients=${ingredientText}&sort=max-used-ingredients&number=5&&addRecipeInformation=true&addRecipeInstructions=true&addRecipeNutrition=true&maxAlcohol=0`
+        `https://api.spoonacular.com/recipes/complexSearch?${apiKey}&offset=${offset}&includeIngredients=${ingredientText}&sort=max-used-ingredients&number=3&&addRecipeInformation=true&addRecipeInstructions=true&addRecipeNutrition=true&maxAlcohol=0`
       );
       const jsonResponse = await response.json();
       console.log(jsonResponse);

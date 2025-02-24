@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import apiStyling from "./apiStyling.module.css";
 import "animate.css";
 
-const apiKey = "apiKey=2c286c913818405685a052e9d10d313a";
+const apiKey = "apiKey=b784797d5b254cbea59e559946debc6a";
 
 export const GetRandomRecipe = ({ protein, cuisine, type }) => {
   useEffect(() => {
@@ -22,11 +22,7 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
       const jsonResponse = await response.json();
       console.log(jsonResponse);
       const resultsFromArray = jsonResponse.results;
-      console.log(resultsFromArray);
-      if (resultsFromArray.length === 0) {
-        document.getElementById("recipeResults").innerHTML = "<h2>No recipes found. Please try again.</h2>";
-      }
-      setComplex(resultsFromArray);
+        setComplex(resultsFromArray);
     } catch (error) {
       console.log(error.message);
     }

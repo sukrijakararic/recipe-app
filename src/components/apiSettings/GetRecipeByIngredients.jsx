@@ -21,9 +21,6 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
       const jsonResponse = await response.json();
       console.log(jsonResponse);
       console.log(jsonResponse.results);
-      if (jsonResponse.results.length === 0) {
-        document.getElementById("recipeResults").innerHTML = "<h2>No recipes found. Please try again.</h2>";
-      }
       setIngredientsRecipe(jsonResponse.results);
     } catch (error) {
       console.log(error.message);

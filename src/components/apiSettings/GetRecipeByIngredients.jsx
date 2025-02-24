@@ -21,6 +21,9 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
       const jsonResponse = await response.json();
       console.log(jsonResponse);
       console.log(jsonResponse.results);
+      if (jsonResponse.results.length === 0) {
+        document.getElementById("recipeResults").innerHTML = "<h2>No recipes found. Please try again.</h2>";
+      }
       setIngredientsRecipe(jsonResponse.results);
     } catch (error) {
       console.log(error.message);
@@ -29,14 +32,15 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
 
   const handleClick = () => {
     callRecipeApiForIngredients();
-      window.scrollTo({
-        top: 500,
+    setTimeout(() => {
+      document.getElementById("results").scrollIntoView({
         behavior: "smooth",
       });
+    }, 500);
   };
 
   return (
-    <div>
+    <div id="results">
       {ingredientText ? (
         <button
           onClick={handleClick}
@@ -48,7 +52,8 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
       ) : (
         <></>
       )}
-
+      
+      <div style={{marginBottom: "2rem"}} id="recipeResults">
       {ingredientsRecipe.map((recipe) => {
         const summaryWithoutTags = recipe.summary.replace(regex, " ");
         const summaryWithoutLastSentence = summaryWithoutTags.replace(
@@ -84,7 +89,7 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
             </div>
           </div>
         );
-      })}
+      })} </div>
     </div>
   );
 };

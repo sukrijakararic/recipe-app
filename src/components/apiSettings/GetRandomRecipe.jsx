@@ -23,6 +23,9 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
       console.log(jsonResponse);
       const resultsFromArray = jsonResponse.results;
       console.log(resultsFromArray);
+      if (resultsFromArray.length === 0) {
+        document.getElementById("recipeResults").innerHTML = "<h2>No recipes found. Please try again.</h2>";
+      }
       setComplex(resultsFromArray);
     } catch (error) {
       console.log(error.message);
@@ -31,14 +34,15 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
 
   const handleClick = () => {
     getRandomComplexRecipe();
-    window.scrollTo({
-      top: 500,
-      behavior: "smooth",
-    });
+    setTimeout(() => {
+      document.getElementById("results").scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 500);
   };
 
   return (
-    <div>
+    <div id="results">
       {type && cuisine && protein ? (
         <div className="animate__animated animate__bounceIn">
           <h3>And finally,</h3>
@@ -50,6 +54,7 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
       ) : (
         <></>
       )}
+      <div style={{marginBottom: "2rem"}} id="recipeResults">
       {complex.map((recipe) => {
         const summaryWithoutTags = recipe.summary.replace(regex, " ");
         const summaryWithoutLastSentence = summaryWithoutTags.replace(
@@ -77,6 +82,7 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
                 <a
                   href={recipe.sourceUrl}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={apiStyling.anchor}
                 >
                   <p>👉Click here for the full recipe👈</p>
@@ -85,7 +91,7 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
             </div>
           </div>
         );
-      })}
+      })}</div>
     </div>
   );
 };

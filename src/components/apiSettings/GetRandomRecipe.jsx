@@ -22,6 +22,13 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
       const jsonResponse = await response.json();
       console.log(jsonResponse);
       const resultsFromArray = jsonResponse.results;
+      if (resultsFromArray.length === 0) {
+        document.getElementById("recipeResults").innerHTML =
+          "Sorry, we couldn't find any recipes. Please try again!";
+      } else if (resultsFromArray.length > 1) {
+        document.getElementById("recipeResults").innerHTML =
+          "";
+      }
         setComplex(resultsFromArray);
     } catch (error) {
       console.log(error.message);
@@ -50,7 +57,8 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
       ) : (
         <></>
       )}
-      <div style={{marginBottom: "2rem"}} id="recipeResults">
+      <div style={{marginBottom: "2rem"}}>
+        <h2 id="recipeResults"></h2>
       {complex.map((recipe) => {
         const summaryWithoutTags = recipe.summary.replace(regex, " ");
         const summaryWithoutLastSentence = summaryWithoutTags.replace(

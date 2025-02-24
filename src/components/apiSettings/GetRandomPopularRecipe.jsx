@@ -11,6 +11,10 @@ export const GetRandomPopularRecipe = () => {
   }, []);
   const handleClick = () => {
     getPopularRecipe();
+    window.scrollTo({
+      top: 500,
+      behavior: "smooth",
+    });
   };
 
   const [random, setRandom] = useState([]);

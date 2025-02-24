@@ -29,6 +29,10 @@ export const GetRecipeByIngredients = ({ ingredArray }) => {
 
   const handleClick = () => {
     callRecipeApiForIngredients();
+      window.scrollTo({
+        top: 500,
+        behavior: "smooth",
+      });
   };
 
   return (

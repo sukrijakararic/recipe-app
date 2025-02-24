@@ -31,6 +31,10 @@ export const GetRandomRecipe = ({ protein, cuisine, type }) => {
 
   const handleClick = () => {
     getRandomComplexRecipe();
+    window.scrollTo({
+      top: 500,
+      behavior: "smooth",
+    });
   };
 
   return (
